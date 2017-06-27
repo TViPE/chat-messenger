@@ -6,6 +6,7 @@ var message = $('#chat-message');
 var handle = $('#chat-handle');
 var btn = $('#chat-button');
 var output = $('#chat-output');
+var feedback = $('#chat-feedback');
 var outputVal = "";
 
 // emit event
@@ -18,19 +19,22 @@ btn.on('click', function(){
 		message: messageVal,
 		handle: handleVal
 	}
-	console.log(chatObj)
-	// socket.emit('chat', {
-	// 	message: message.value,
-	// 	name: name.value
-	// });
-
 	socket.emit('chat', chatObj);
 	message.val("");
 });
 
 
 //socket handle chat event with received data sent from server
-socket.on('chat', function(data){
+socket.on('chat', function (data){
+	feedback.html("");
 	outputVal += '<p><strong>' + data.handle + ':</strong> ' + data.message + '</p>';
 	output.html(outputVal);
+});
+
+message.keypress(function(){
+	socket.emit('typing', handle.val());
+});
+
+socket.on('typing', function (data){
+	feedback.html('<p>' + data + ' is typing</p>');
 });
