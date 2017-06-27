@@ -1,0 +1,29 @@
+body {
+	background-color: #a51a4e;
+}
+.container {
+	width: 600px;
+	height: 600px;
+	margin-top: 20px;
+}
+
+#chat-window {
+	width: 600px;
+	height: 400px;
+	background: lightgrey;
+}
+
+#chat-button {
+ 	margin-top: 10px;
+}
+
+label {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: white;
+}
+
+header {
+	color:white;
+	padding-bottom: 20px;
+}
