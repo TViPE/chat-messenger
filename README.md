@@ -1,7 +1,7 @@
 
 # Messenger
 
-##Project Overview
+## Project Overview
 
 The goal of this project is to create a chat messenger application that the users on the same network can send message to each other. This project is created with nodejs, expressjs, socket.io for the server side, and bootstrap and jQuery for the front end.
 
