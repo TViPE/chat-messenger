@@ -6,7 +6,7 @@
 The goal of this project is to create a chat messenger application that the users on the same network can send message to each other. This project is created with nodejs, expressjs, socket.io for the server side, and bootstrap and jQuery for the front end.
 
 
-![Alt text](https://github.com/TViPE/chat-messenger/public/img/screenshot_00.png)
+![Alt text](https://github.com/TViPE/chat-messenger/blob/master/public/img/screenshot_01.png)
 
 ## Why this Project?
 
